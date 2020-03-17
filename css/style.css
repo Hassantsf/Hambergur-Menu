@@ -1,0 +1,72 @@
+:root {
+  --animate-speed: 0.3s;
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.btn {
+  color: #fff;
+  background: var(--primary-color);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  transition: all 1s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.content .container{
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2.5rem;
+  height: 100vh;
+  position: relative;
+}
+
+.content::before {
+  content: '';
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
